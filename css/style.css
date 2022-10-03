@@ -139,7 +139,7 @@ button{
     }
 
     .card_grid{
-        max-width: 100%;
+        max-width: 375px;
         margin-top: 30px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
