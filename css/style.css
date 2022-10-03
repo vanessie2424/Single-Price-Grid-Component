@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --CyanOpacity: hsl(179, 62%, 43% ,0.6);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Karla', sans-serif;
+   
+}
+
+main{
+    background: rgb(193, 220, 230);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "community community"
+    "monthly why"
+    ;
+    box-shadow: 5px 5px 5px var(--GrayishBlue);
+   
+
+    
+    
+    
+
+}
+.community{
+    background: white;
+    grid-area: community;
+    border-radius: 10px 10px 0 0;
+    padding: 25px;
+}
+#join{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: var(--Cyan);
+    font-weight: 700;
+
+}
+#hassle{
+    color: var(--BrightYellow);
+    font-weight: 700;
+    margin-bottom: 10px;
+    
+}
+#gain{
+    color: var(--GrayishBlue);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+#perfect{
+    color: var(--GrayishBlue);
+    font-size: 16px;
+
+}
+.monthly{
+    background: var(--Cyan);
+    grid-area: monthly;
+    border-radius: 0 0 0 10px;
+    padding: 25px 30px;
+}
+#subscription{
+    margin: 10px 0;
+    color: var(--LightGray);
+    font-weight: 700;
+}
+.money{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+#dollar{
+    color: var(--LightGray);
+    font-weight: 700;
+}
+#month{
+    color: var(--LightGray);
+    font-weight: 400;
+}
+#access{
+    color: var(--LightGray);
+    font-weight: 400;
+}
+button{
+    background: var(--BrightYellow);
+    border-radius: 5px;
+    width: 200px;
+    height: 33px;
+    margin-top: 30px;
+    color: var(--LightGray);
+    font-weight: 700;
+    box-shadow: 1px 1px 1px var(--GrayishBlue);
+}
+.why{
+    background: var(--CyanOpacity);
+    grid-area: why;
+    border-radius: 0 0 10px 0;
+    padding: 25px;
+    color: var(--LightGray);
+    font-weight: 400;
+    font-size: 16px;
+}
+#us{
+  font-weight: 700;
+  margin: 10px 0;  
+}
+
+.footer{
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width:700px) {
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card_grid{
+        max-width: 100%;
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "community"
+        "monthly"
+        "why"
+        ;
+    }
+
+    .monthly{
+        border-radius: 0 0 0 0;
+    }
+    .why{
+        border-radius: 0 0 10px 10px;
+    }
+}
